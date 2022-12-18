@@ -25,6 +25,7 @@ while (1):
     clientSocekt, addr_info = serverSocket.accept()
     for i in denied:
         if ((clientSocekt.getsockname()[0]) == i):
+            clientSocekt.close()
             k = 1
 
     if (k == 1):
